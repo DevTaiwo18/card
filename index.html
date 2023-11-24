@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recharge Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css -->
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+    <!-- MODAL -->
+    
+        <div class="modal">
+            <h1 id="modal-text">ggfhhghhgjjhjhjhj</h1>
+            <button class="btn okay-btn" onclick="keep()">Ok</button>
+        </div>
+    
+    <!-- END OF MODAL -->
+
+    <!-- HEADER -->
+    <header>
+        <h1>Recharge Card </h1>
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- RECHARGE CARD -->
+    <section class="recharge">
+        <!-- reacharge container -->
+        <section class="recharge-con">
+            <!-- recharge left(generate pin) -->
+            <section class="recharge-left generate-pin">
+
+                    <!-- select network -->
+                    <div>
+                        <label for="select-network">Choose Network</label>
+                        <select name="select-network" id="select-network">
+                            <option value="select-network">Select Network</option>
+                            <option value="MTN">Mtn</option>
+                            <option value="AIRTEL">Airtel</option>
+                            <option value="GLO">Glo</option>
+                            <option value="9MOBILE">9mobile</option>
+                        </select>
+                    </div>
+                    <!-- end of select amount -->
+
+                    <!-- select amount -->
+                    <div>
+                        <label for="select-amount">Select Amount</label>
+                        <select name="select-amount" id="select-amount">
+                            <option value="select-amount">Select Amount</option>
+                            <option value="1000">1000</option>
+                            <option value="500">500</option>
+                            <option value="200">200</option>
+                            <option value="100">100</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+                    <!-- end of select amount -->
+
+                    <!-- generated pin -->
+                    <div>
+                        <label for="generate-pin">Generate Pin</label>
+                        <div class="pin" style="position: relative;">
+                            <input type="text" name="generated-pin" id="generated-pin" placeholder="Generated pin" disabled>
+                            <i class="fas fa-copy copy-icon" style="color: #000000;" onclick="copy()"></i>
+                        </div>
+                    </div>
+                    <!-- end of generated pin -->
+
+                    <!-- pin buttons -->
+                    <div>
+                        <button id="generate-btn" class="btn" onclick="Generate()">Generate-Pin</button>
+                    </div>
+                    <!-- end of pin buttons -->
+
+            </section>
+            <!-- end of recharge left(generate pin) -->
+
+
+            <!-- RECHARGE RIGHT (recharge pin)-->
+            <section class="recharge-right">
+                <label for="insert-pin">Insert Pin Below</label>
+                <div class="input-container" style="position: relative;">
+                    <input type="text" id="insert-pin" placeholder="pin">
+                    <i class="fa-solid fa-paste paste-icon" style="color: #000000;" onclick="paste()"></i>
+                </div>
+                <button id="recharge-btn" class="btn" onclick="recharge()">Recharge Card</button>
+            </section>
+            <!-- END OF RECHARGE RIGHT (recharge pin) -->
+        </section>
+        <!-- end of recharge container -->
+    </section>
+    <!-- END OF RECHARGE CARD -->
+
+    <!-- HISTORY -->
+    <section class="history">
+        <!-- history container -->
+        <section class="history-con">
+            <table>
+                <thead>
+                    <tr>
+                        <th>S/N</th>
+                        <th>Network</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Time</th>
+                        <th>PrintRef</th>
+                        <th>Status</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tbody">
+                    
+                </tbody>
+            </table>
+        </section>
+        <!-- end of history container -->
+    </section>
+    <!-- END OF HISTORY -->
+
+
+    <!-- JS -->
+    <script src="./app.js"></script>
+</body>
+</html>

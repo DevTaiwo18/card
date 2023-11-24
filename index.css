@@ -1,0 +1,315 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Recharge section styles */
+.recharge {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+/* Recharge container styles */
+.recharge-con {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+/* Recharge left (generate pin) styles */
+.recharge-left {
+    flex: 1;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Label styles */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Input, select, and button styles */
+input[type="text"],
+select,
+button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button styles */
+button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Recharge right (recharge pin) styles */
+.recharge-right {
+    flex: 1;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* History section styles */
+.history {
+    margin-top: 2rem;
+}
+
+/* History container styles */
+.history-con {
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    /* Table styles */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 0.5rem;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: black;
+        color: red;
+    }
+    tr{
+        text-align: center;
+    }
+    .left{
+        margin-left: -4rem;
+    }
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: none;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.modal h1 {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+.okay-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.okay-btn:hover {
+    background-color: #0056b3;
+}
+.copy-icon {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    right: 10px;
+    cursor: pointer;
+    z-index: 1; 
+}
+.paste-icon {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    right: 10px;
+    cursor: pointer;
+    z-index: 1; 
+}
+#generated-pin{
+    position: relative;
+}
+.red{
+    padding: 8px 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .recharge {
+        flex-direction: column; 
+    }
+
+    .recharge-con {
+        flex-direction: column; 
+        width: 100%;
+    }
+
+    .recharge-left,
+    .recharge-right {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .history-con {
+        width:100%;
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    
+        th,
+        td {
+            padding: 0.5rem;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            font-size: 12px;
+        }
+}
+
+@media (max-width: 767px) {
+    .history-con {
+        width: 100%;
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow-x: scroll !important; 
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow-x: scroll !important;
+    }
+
+    th,
+    td {
+        padding: 0.5rem;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        font-size: 12px; 
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem; 
+    }
+
+    .modal {
+        width: 90%; 
+        padding: 1rem; 
+    }
+
+    .recharge,
+    .recharge-con,
+    .recharge-left,
+    .recharge-right {
+        width: 100%; 
+    }
+
+    label,
+    input[type="text"],
+    select,
+    button {
+        font-size: 12px; 
+    }
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
